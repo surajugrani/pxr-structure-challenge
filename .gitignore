@@ -1,0 +1,12 @@
+# Logs
+*.log
+logs/
+slurm-*.out
+
+# Large/scratch data
+scratch/
+*.tmp
+
+# Outputs
+methods/boltz2/outputs_1/output_cif-to-pdb/*.pdb
+methods/boltz2/outputs_1/output_cif-to-pdb/*.cif
