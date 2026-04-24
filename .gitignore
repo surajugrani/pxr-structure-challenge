@@ -8,5 +8,6 @@ scratch/
 *.tmp
 
 # Outputs
-methods/boltz2/outputs_1/output_cif-to-pdb/*.pdb
-methods/boltz2/outputs_1/output_cif-to-pdb/*.cif
+*cif
+methods/Glide/9FZJ_docking
+data/processed/9FZJ_Glide_docking
