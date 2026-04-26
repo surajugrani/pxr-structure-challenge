@@ -7,5 +7,5 @@
 module load cuda/11.8
 #micromamba activate boltz
 
-boltz predict ./data/processed/input_yamls_colabfold_msa/ --out_dir ./methods/boltz2/outputs_4_colabfold-msa
+boltz predict ./data/processed/input_yamls_colabfold_msa/x01334-1.yaml --out_dir ./methods/boltz2/just_x01334-1
 #boltz predict yamls_no-msa/ --use_msa_server --use_potentials

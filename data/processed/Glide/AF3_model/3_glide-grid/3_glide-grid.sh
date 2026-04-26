@@ -1,0 +1,1 @@
+"${SCHRODINGER}/glide" 3_glide-grid.in -OVERWRITE -HOST hpc -TMPLAUNCHDIR

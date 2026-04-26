@@ -7,6 +7,8 @@ slurm-*.out
 scratch/
 *.tmp
 
+*.zip
+
 # Outputs
 *cif
 methods/Glide/9FZJ_docking

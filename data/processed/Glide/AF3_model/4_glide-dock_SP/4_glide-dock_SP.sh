@@ -1,0 +1,1 @@
+"${SCHRODINGER}/glide" 4_glide-dock_SP.in -OVERWRITE -adjust -HOST hpc:1 -TMPLAUNCHDIR

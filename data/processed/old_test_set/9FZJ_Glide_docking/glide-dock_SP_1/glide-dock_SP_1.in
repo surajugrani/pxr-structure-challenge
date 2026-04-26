@@ -1,0 +1,5 @@
+FORCEFIELD   OPLS_2005
+GRIDFILE   /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/processed/9FZJ_Glide_docking/glide-grid_liglen15/glide-grid_liglen15.zip
+LIGANDFILE   glide-dock_SP_1.maegz
+POSE_OUTTYPE   ligandlib_sd
+PRECISION   SP

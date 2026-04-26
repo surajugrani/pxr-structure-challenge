@@ -1,0 +1,1 @@
+"${SCHRODINGER}/ligprep" -inp ligprep_78ligs.inp -NJOBS 1 -JOBNAME ligprep_78ligs -HOST localhost:1

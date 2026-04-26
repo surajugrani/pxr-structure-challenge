@@ -1,0 +1,28 @@
+--- This project was created on Tue Apr 21 20:22:43 2026
+
+-----
+Tue Apr 21 20:24:22 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/raw/9FZJ_charmm_pdbreader_1.pdb
+
+-----
+Tue Apr 21 20:30:11 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/raw/9FZJ_charmm_pdbreader.pdb
+
+-----
+Tue Apr 21 20:34:40 2026
+Starting Receptor Grid Generation
+Job name: glide-grid_liglen15
+Job ID: login03-adm-0-69e841cf
+
+-----
+Tue Apr 21 20:35:41 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/raw/pxr-challenge_structure_TEST_BLINDED.csv
+
+-----
+Tue Apr 21 20:42:48 2026
+Starting Ligand Docking
+Job name: glide-dock_SP_1
+Job ID: login03-adm-0-69e843b7
