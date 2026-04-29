@@ -1,0 +1,10 @@
+DOCKING_METHOD   confgen
+FORCEFIELD   OPLS_2005
+GRIDFILE   generate-grids-gridgen.zip
+LIGANDFILE   1abc_lig-0.sdf
+USE_REF_LIGAND   True
+REF_LIGAND_FILE   1abc_lig-0.sdf
+CORE_RESTRAIN   True
+COMPRESS_POSES   FALSE
+POSE_OUTTYPE   ligandlib_sd
+CALC_INPUT_RMS   True

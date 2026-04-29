@@ -11,5 +11,8 @@ scratch/
 
 # Outputs
 *cif
+.mae
+.sdf
+.maegz
 methods/Glide/9FZJ_docking
 data/processed/9FZJ_Glide_docking

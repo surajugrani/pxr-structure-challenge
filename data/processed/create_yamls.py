@@ -1,10 +1,10 @@
 import pandas as pd
 from pathlib import Path
 
-TEMPLATE_FILE = "../raw/template.yaml"
+TEMPLATE_FILE = "../raw/template_PDB-templs_colfolmsa.yaml"
 CSV_FILE = "../raw/pxr-challenge_structure_TEST_BLINDED.csv"
 DUMMY_SMILES = "CCCCC"
-OUTPUT_DIR = "input_yamls_colabfold_msa"
+OUTPUT_DIR = "input_yamls_w-PDBtempl_colabfoldmsa"
 
 with open(TEMPLATE_FILE, "r") as f:
     template = f.read()

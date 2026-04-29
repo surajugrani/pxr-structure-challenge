@@ -1,0 +1,13 @@
+version: 1  # Optional, defaults to 1
+sequences:
+  - protein:
+      id: [A]
+      sequence: GLTEEQRMMIRELMDAQMKTFDTTFSHFKNFRLPGVLSSGCELPESLQAPSREEAAKWSQVRKDLCSLKVSLQLRGEDGSVWNYKPPADSGGKEIFSLLPHMADMSTYMFKGIISFAKVISYFRDLPIEDQISLLKGAAFELCQLRFNTVFNAETGTWECGRLSYCLEDTAGGFQQLLLEPMLKFHYMLKKLQLHEEEYVLMQAISLFSPDRPGVLQHRVVDQLQEQFAITLKSYIECNRPQPAHRFLFLKIMAMLTELRSINAQHTQRLLRIQDIHPFATPLMQELFGITGS
+      msa: "./data/raw/msa_files/colfol_clean.a3m"
+  - ligand:
+      id: [B]
+      smiles: 'CN1CCN(C(=O)C2=C3C=CC(Br)=CC3=NN2C)C2=CC=C(F)C=C21'
+templates:
+  - cif: "./data/raw/PDB_templates_2A/6tfi.cif"
+  - cif: "./data/raw/PDB_templates_2A/7axe.cif"
+  - cif: "./data/raw/PDB_templates_2A/9fzj.cif"      

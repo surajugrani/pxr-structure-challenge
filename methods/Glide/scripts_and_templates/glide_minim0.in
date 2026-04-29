@@ -1,0 +1,10 @@
+CV_CUTOFF   500.0
+CANONICALIZE   True
+DOCKING_METHOD   mininplace
+FORCEFIELD   OPLS_2005
+GRIDFILE   generate-grids-gridgen.zip
+LIGANDFILE   1abc_lig-0.sdf
+POSTDOCK   True
+COMPRESS_POSES   FALSE
+POSE_OUTTYPE   poseviewer
+CALC_INPUT_RMS  True
