@@ -10,4 +10,5 @@ sequences:
 templates:
   - cif: "./data/raw/PDB_templates_2A/6tfi.cif"
   - cif: "./data/raw/PDB_templates_2A/7axe.cif"
+  - cif: "./data/raw/PDB_templates_2A/8r00_nolig.cif"  
   - cif: "./data/raw/PDB_templates_2A/9fzj.cif"      

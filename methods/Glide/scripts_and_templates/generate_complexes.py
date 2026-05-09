@@ -6,7 +6,7 @@ Usage: $SCHRODINGER/run script.py <receptor.maegz> <docked.sdfgz> <output_dir>
 import sys
 import os
 from schrodinger.structure import StructureReader, StructureWriter
-from schrodinger.structutils.transform import get_centroid
+#from schrodinger.structutils.transform import get_centroid
 
 receptor_file = sys.argv[1]
 ligand_file = sys.argv[2]

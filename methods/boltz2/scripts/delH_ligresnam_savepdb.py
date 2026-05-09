@@ -40,7 +40,7 @@ def main():
     mae_files = []
     for root, dirs, files in os.walk(input_dir):
         for f in files:
-            if f.endswith('.cif'):  ### .cif or .mae !!!
+            if f.endswith('.pdb'):  ### .pdb or .cif or .mae !!!
                 mae_files.append(os.path.join(root, f))
 
     for mae in mae_files:

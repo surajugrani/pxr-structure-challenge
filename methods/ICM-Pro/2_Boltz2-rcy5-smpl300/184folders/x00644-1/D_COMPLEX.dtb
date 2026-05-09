@@ -1,0 +1,187 @@
+#>I D_COMPLEX.CN_I_active
+  0
+#>R D_COMPLEX.CN_R_maxDist
+  0.
+#>R D_COMPLEX.CN_R_minDist
+  0.
+#>R D_COMPLEX.CN_R_weight
+  0.
+#>S D_COMPLEX.CN_S_atom
+
+#>S D_COMPLEX.CN_S_dest
+
+#>S D_COMPLEX.CN_S_type
+
+#>R D_COMPLEX.R_4DscoreOffsets
+  0.
+#>R D_COMPLEX.R_boxDim
+  -13.337
+  -11.808
+  -13.828
+  10.182
+  11.741
+  6.452
+#>R D_COMPLEX.R_ligInitPosition
+  -1.85704
+  0.483313
+  -3.65102
+  1.
+  0.
+  0.
+  0.
+  1.
+  0.
+#>R D_COMPLEX.R_scoreWeights
+  0.
+  1.
+  0.6
+  0.66
+  2.53
+  0.67
+  0.75
+  0.6
+  0.
+#>i D_COMPLEX.i_dbSize
+ 1
+#>i D_COMPLEX.i_maxHdonors
+ 5
+#>i D_COMPLEX.i_maxLigSize
+ 500
+#>i D_COMPLEX.i_maxNO
+ 10
+#>i D_COMPLEX.i_maxTorsion
+ 10
+#>i D_COMPLEX.i_minLigSize
+ 100
+#>i D_COMPLEX.i_mnconf
+ 40
+#>i D_COMPLEX.i_mnhighEnergy
+ 9999
+#>i D_COMPLEX.i_mnreject
+ 10
+#>i D_COMPLEX.i_mnvisits
+ 10
+#>i D_COMPLEX.i_ringFlexLevel
+ 2
+#>l D_COMPLEX.l_assignCharges
+  yes
+#>l D_COMPLEX.l_buildHydrogens
+  yes
+#>l D_COMPLEX.l_dbondCisTrans
+  no
+#>l D_COMPLEX.l_enhancedBorn
+  no
+#>l D_COMPLEX.l_fixOmegas
+  yes
+#>l D_COMPLEX.l_internalHB
+  yes
+#>l D_COMPLEX.l_membraneScore
+  no
+#>l D_COMPLEX.l_neutralAcidsMol
+  no
+#>l D_COMPLEX.l_protProt
+  no
+#>l D_COMPLEX.l_readyLigand
+  no
+#>l D_COMPLEX.l_readyMaps
+  yes
+#>l D_COMPLEX.l_readyReceptor
+  yes
+#>l D_COMPLEX.l_samplePyramid
+  no
+#>l D_COMPLEX.l_sampleRacemic
+  no
+#>l D_COMPLEX.l_softLigand
+  yes
+#>l D_COMPLEX.l_useBornScore
+  yes
+#>r D_COMPLEX.r_DpH
+  2.
+#>r D_COMPLEX.r_GRID_maxVw
+  4.
+#>r D_COMPLEX.r_ScoreThreshold
+  -32.
+#>r D_COMPLEX.r_Score_maxVw
+  1.
+#>r D_COMPLEX.r_densityWeight
+  0.
+#>r D_COMPLEX.r_dockScanVersion
+  4.6
+#>r D_COMPLEX.r_maxFFen
+  500.
+#>r D_COMPLEX.r_maxLogP
+  5.
+#>r D_COMPLEX.r_maxPk
+  5.
+#>r D_COMPLEX.r_mcShake
+  4.
+#>r D_COMPLEX.r_mfScoreThreshold
+  999.
+#>r D_COMPLEX.r_minLogP
+  0.
+#>r D_COMPLEX.r_minPk
+  0.
+#>r D_COMPLEX.r_pH
+  7.4
+#>r D_COMPLEX.r_plRsMiss
+  0.
+#>r D_COMPLEX.r_temperature
+  1000.
+#>r D_COMPLEX.r_thRstrnt
+  -1.
+#>r D_COMPLEX.r_thTautomer
+  -1.
+#>r D_COMPLEX.r_vicinity
+  1.5
+#>s D_COMPLEX.s_bindPatchRes
+a_D_COMPLEX_rec.a/^L68,^V70,^M102,^M105:^S106,^F110,^F140,^Q144,^F147,^V150,^W158,^C160,^Y165,^M182:^L183,^H186,^H266,^L270,^M284
+#>s D_COMPLEX.s_chargeGroups
+none
+#>s D_COMPLEX.s_clrLig
+default
+#>s D_COMPLEX.s_clrRec
+grey
+#>s D_COMPLEX.s_clrSite
+default pink
+#>s D_COMPLEX.s_covModResAt
+none
+#>s D_COMPLEX.s_covRxn
+none
+#>s D_COMPLEX.s_dbFile
+NOTSET
+#>s D_COMPLEX.s_dbIndex
+NOTSET
+#>s D_COMPLEX.s_dbType
+mol 2D
+#>s D_COMPLEX.s_dspLig
+xstick
+#>s D_COMPLEX.s_dspRec
+wire
+#>s D_COMPLEX.s_dspSite
+xstick
+#>s D_COMPLEX.s_grid4DFlex
+none
+#>s D_COMPLEX.s_ligMol
+2:2
+#>s D_COMPLEX.s_ligName
+deflig
+#>s D_COMPLEX.s_optSC
+a_none
+#>s D_COMPLEX.s_recExplicitObj
+none
+#>s D_COMPLEX.s_recMol
+1:1
+#>s D_COMPLEX.s_recName
+D_COMPLEX_rec
+#>s D_COMPLEX.s_selLig
+a_*.*//*
+#>s D_COMPLEX.s_selRec
+a_*.*//*
+#>s D_COMPLEX.s_selSite
+a_*.*//!M5
+#>s D_COMPLEX.s_templateMatch
+substructure
+#>s D_COMPLEX.s_templateObj
+none
+#>s D_COMPLEX.s_xrObj
+none
