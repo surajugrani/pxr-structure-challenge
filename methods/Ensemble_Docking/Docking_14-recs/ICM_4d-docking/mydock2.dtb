@@ -1,0 +1,187 @@
+#>I mydock2.CN_I_active
+  0
+#>R mydock2.CN_R_maxDist
+  0.
+#>R mydock2.CN_R_minDist
+  0.
+#>R mydock2.CN_R_weight
+  0.
+#>S mydock2.CN_S_atom
+
+#>S mydock2.CN_S_dest
+
+#>S mydock2.CN_S_type
+
+#>R mydock2.R_4DscoreOffsets
+  0.
+#>R mydock2.R_boxDim
+  -1.97287
+  66.4126
+  -12.4717
+  19.0242
+  86.177
+  7.53201
+#>R mydock2.R_ligInitPosition
+  10.9501
+  76.1073
+  -1.25778
+  -0.626054
+  0.741753
+  0.240537
+  -0.513288
+  -0.15979
+  -0.84321
+#>R mydock2.R_scoreWeights
+  0.
+  1.
+  0.6
+  0.66
+  2.53
+  0.67
+  0.75
+  0.6
+  0.
+#>i mydock2.i_dbSize
+ 235
+#>i mydock2.i_maxHdonors
+ 5
+#>i mydock2.i_maxLigSize
+ 500
+#>i mydock2.i_maxNO
+ 10
+#>i mydock2.i_maxTorsion
+ 10
+#>i mydock2.i_minLigSize
+ 100
+#>i mydock2.i_mnconf
+ 40
+#>i mydock2.i_mnhighEnergy
+ 9999
+#>i mydock2.i_mnreject
+ 10
+#>i mydock2.i_mnvisits
+ 10
+#>i mydock2.i_ringFlexLevel
+ 2
+#>l mydock2.l_assignCharges
+  yes
+#>l mydock2.l_buildHydrogens
+  yes
+#>l mydock2.l_dbondCisTrans
+  no
+#>l mydock2.l_enhancedBorn
+  no
+#>l mydock2.l_fixOmegas
+  yes
+#>l mydock2.l_internalHB
+  yes
+#>l mydock2.l_membraneScore
+  no
+#>l mydock2.l_neutralAcidsMol
+  no
+#>l mydock2.l_protProt
+  no
+#>l mydock2.l_readyLigand
+  yes
+#>l mydock2.l_readyMaps
+  yes
+#>l mydock2.l_readyReceptor
+  yes
+#>l mydock2.l_samplePyramid
+  no
+#>l mydock2.l_sampleRacemic
+  no
+#>l mydock2.l_softLigand
+  yes
+#>l mydock2.l_useBornScore
+  yes
+#>r mydock2.r_DpH
+  2.
+#>r mydock2.r_GRID_maxVw
+  4.
+#>r mydock2.r_ScoreThreshold
+  -32.
+#>r mydock2.r_Score_maxVw
+  1.
+#>r mydock2.r_densityWeight
+  0.
+#>r mydock2.r_dockScanVersion
+  4.6
+#>r mydock2.r_maxFFen
+  500.
+#>r mydock2.r_maxLogP
+  5.
+#>r mydock2.r_maxPk
+  5.
+#>r mydock2.r_mcShake
+  4.
+#>r mydock2.r_mfScoreThreshold
+  999.
+#>r mydock2.r_minLogP
+  0.
+#>r mydock2.r_minPk
+  0.
+#>r mydock2.r_pH
+  7.4
+#>r mydock2.r_plRsMiss
+  0.
+#>r mydock2.r_temperature
+  1000.
+#>r mydock2.r_thRstrnt
+  -1.
+#>r mydock2.r_thTautomer
+  -1.
+#>r mydock2.r_vicinity
+  1.5
+#>s mydock2.s_bindPatchRes
+a_mydock2_rec.a/^D205:^V211,^L240,^M243:^A244,^M246:^S247,^M250:^F251,^F281,^C284:^Q285,^F288,^W299,^C301,^Y306,^L308:^D310,^L318,^E321,^M323:^L324,^H327,^H407:^T408,^R410:^L411,^I414,^F420,^M425,^F429
+#>s mydock2.s_chargeGroups
+none
+#>s mydock2.s_clrLig
+default
+#>s mydock2.s_clrRec
+grey
+#>s mydock2.s_clrSite
+default pink
+#>s mydock2.s_covModResAt
+none
+#>s mydock2.s_covRxn
+none
+#>s mydock2.s_dbFile
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Ensemble_Docking/Docking_14-recs/Docking/2_ligprep-184-smiles-out.sdf
+#>s mydock2.s_dbIndex
+2_ligprep-184-smiles-out
+#>s mydock2.s_dbType
+mol 2D
+#>s mydock2.s_dspLig
+xstick
+#>s mydock2.s_dspRec
+wire
+#>s mydock2.s_dspSite
+xstick
+#>s mydock2.s_grid4DFlex
+none
+#>s mydock2.s_ligMol
+2:2
+#>s mydock2.s_ligName
+mydock2_default
+#>s mydock2.s_optSC
+a_none
+#>s mydock2.s_recExplicitObj
+none
+#>s mydock2.s_recMol
+1:1
+#>s mydock2.s_recName
+mydock2_rec
+#>s mydock2.s_selLig
+a_*.*//*
+#>s mydock2.s_selRec
+a_*.*//*
+#>s mydock2.s_selSite
+a_*.*//!M5
+#>s mydock2.s_templateMatch
+substructure
+#>s mydock2.s_templateObj
+none
+#>s mydock2.s_xrObj
+none

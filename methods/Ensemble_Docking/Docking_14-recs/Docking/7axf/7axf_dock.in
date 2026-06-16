@@ -1,0 +1,7 @@
+GRIDFILE   /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Ensemble_Docking/Docking_14-recs/Docking/7axf/generate-grids-gridgen.zip
+LIGANDFILE /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Ensemble_Docking/Docking_14-recs/Docking/2_ligprep-184-smiles-out.sdf
+JOBNAME    7axf_docking_out
+PRECISION  SP
+POSE_OUTTYPE  ligandlib
+DOCKING_METHOD  confgen
+POSTDOCK_NPOSE  1

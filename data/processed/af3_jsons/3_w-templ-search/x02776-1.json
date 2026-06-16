@@ -1,0 +1,25 @@
+{
+  "name": "x02776-1",
+  "modelSeeds": [
+    1
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "GLTEEQRMMIRELMDAQMKTFDTTFSHFKNFRLPGVLSSGCELPESLQAPSREEAAKWSQVRKDLCSLKVSLQLRGEDGSVWNYKPPADSGGKEIFSLLPHMADMSTYMFKGIISFAKVISYFRDLPIEDQISLLKGAAFELCQLRFNTVFNAETGTWECGRLSYCLEDTAGGFQQLLLEPMLKFHYMLKKLQLHEEEYVLMQAISLFSPDRPGVLQHRVVDQLQEQFAITLKSYIECNRPQPAHRFLFLKIMAMLTELRSINAQHTQRLLRIQDIHPFATPLMQELFGITGS",
+        "unpairedMsaPath": "/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/raw/msa_files/colabfold_msa.a3m",
+        "pairedMsa": "",
+        "templates": null
+      }
+    },
+    {
+      "ligand": {
+        "id": "B",
+        "smiles": "CS(=O)(=O)NCC1=CC=C(C(=O)N2CCCCCC3=CC=CC=C32)O1"
+      }
+    }
+  ],
+  "dialect": "alphafold3",
+  "version": 3
+}

@@ -9,7 +9,9 @@ Boltz
 1. Using colabfold msa 
 2. Using colabfold msa with --recycling_steps 5 --sampling_steps 300
 
-
+ICM-pro
+1. Docking using AF3 model as receptor
+2. Redocking Boltz2 predictions with --recycling_steps 5 --sampling_steps 300
 
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 module load icm
-for state_dir in 184folders/*/; do
+for state_dir in 3_plainAF3_redocking/184folders/*/; do
 #for state_dir in 1f1t/; do
     echo "Processing $state_dir"
     out_obj=$(ls "$state_dir"*lig1.ob)

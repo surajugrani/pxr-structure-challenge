@@ -1,6 +1,8 @@
 import os
+import sys
 
-base_dir = "./2_Boltz2-rcy5-smpl300/184folders/"  
+#base_dir = "./2_Boltz2-rcy5-smpl300/184folders/"
+base_dir = sys.argv[1]  
 
 templates = {
     "_minim.in": "./scripts_and_templates/glide_minim0.in",

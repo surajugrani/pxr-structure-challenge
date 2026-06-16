@@ -4,7 +4,7 @@ import subprocess
 
 base_dir = os.getcwd()
 
-dirs = glob.glob("./2_Boltz2-rcy5-smpl300/184folders/*/") 
+dirs = glob.glob("./5_AF3-w-9fzj-templ-iptm_redocking/184_folders/*/") 
 
 for di in dirs:
     os.chdir(di)

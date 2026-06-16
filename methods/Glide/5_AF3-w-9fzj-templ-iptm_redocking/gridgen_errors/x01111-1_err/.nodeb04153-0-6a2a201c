@@ -1,0 +1,51 @@
+filesize: 3300
+JobId: nodeb04153-0-6a2a201c
+Name: generate_glide_grids_run
+Program: Generate Grids
+Processors: 1
+OrigLaunchHost: nodeb04153.cluster.net
+OrigLaunchDir: /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/5_AF3-w-9fzj-templ-iptm_redocking/x01111-1
+Host: nodeb04153.cluster.net
+User: sugrani
+Dir: /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/5_AF3-w-9fzj-templ-iptm_redocking/x01111-1
+HostsFile: /opt/applications/schrodinger/2025-3/schrodinger.hosts
+HostEntry: localhost
+Commandline: /opt/applications/schrodinger/2025-3/utilities/generate_glide_grids -rec_file /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/5_AF3-w-9fzj-templ-iptm_redocking/x01111-1/x01111-1_complex.mae -lig_asl "res. LIG"
+MmshareExec: /opt/applications/schrodinger/2025-3/mmshare-v7.1/bin/Linux-x86_64
+JobHost: nodeb04153.cluster.net
+JobUser: sugrani
+JobDir: :tmpdir:
+TmpDir: /tmp
+JobDB: /gpfs/home/sugrani/.schrodinger/.jobdb2
+JobMmshareExec: /opt/applications/schrodinger/2025-3/mmshare-v7.1/bin/Linux-x86_64
+JobPort: 39907
+JobPid: 3525779
+Status: started
+LastStatus: launched
+Summary: The job directory has been created on nodeb04153.cluster.net.
+Command: BASE64 KCAiL29wdC9hcHBsaWNhdGlvbnMvc2Nocm9kaW5nZXIvMjAyNS0zL3J1biIgImdlbmVyYXRlX2dsaWRlX2dyaWRzLnB5IiAtcmVjX2ZpbGUgIi9ncGZzL2hvbWUvc3VncmFuaS9TZWxmTGVhcm5pbmcvSW5zdGFsbGVkX3Byb2dyYW1zL1B4ci1Cb2x0ejIvcHhyLXN0cnVjdHVyZS1jaGFsbGVuZ2UvbWV0aG9kcy9HbGlkZS81X0FGMy13LTlmemotdGVtcGwtaXB0bV9yZWRvY2tpbmcveDAxMTExLTEveDAxMTExLTFfY29tcGxleC5tYWUiIC1saWdfYXNsICJyZXMuIExJRyIgKSA+ICJnZW5lcmF0ZV9nbGlkZV9ncmlkc19ydW4ubG9nIiAyPiYx
+Home: /gpfs/home/sugrani
+Timezone: -0700
+LaunchTime: 2026-06-10-19:40:28
+StatusTime: 2026-06-10-19:40:29
+LogInterval: 60
+SaveJobDir: 0
+TmpLaunchDir: 0
+AutoCleanup: 0
+InputFiles[1]:	/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/5_AF3-w-9fzj-templ-iptm_redocking/x01111-1/x01111-1_complex.mae
+LogFiles[1]:	generate_glide_grids_run.log
+Envs[1]:	HOME_MMSHARE_EXEC=/opt/applications/schrodinger/2025-3/mmshare-v7.1/bin/Linux-x86_64
+Envs[2]:	MMSHARE_EXEC=/opt/applications/schrodinger/2025-3/mmshare-v7.1/bin/Linux-x86_64
+Envs[3]:	SCHRODINGER=/opt/applications/schrodinger/2025-3
+Envs[4]:	SCHRODINGER_APP_EXEC=MMSHARE_EXEC
+Envs[5]:	SCHRODINGER_COMMANDLINE="/opt/applications/schrodinger/2025-3/utilities/generate_glide_grids -rec_file /gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/5_AF3-w-9fzj-templ-iptm_redocking/x01111-1/x01111-1_complex.mae -lig_asl \"res. LIG\""
+Envs[6]:	SCHRODINGER_CUSTOM_MONOMER_DB_PATH=/gpfs/home/sugrani/.schrodinger/custom_monomerlib.db
+Envs[7]:	SCHRODINGER_DEFAULT_MONOMER_DB_PATH=/opt/applications/schrodinger/2025-3/mmshare-v7.1/data/helm/core_monomerlib.db
+Envs[8]:	SCHRODINGER_EXEC=/opt/applications/schrodinger/2025-3/internal/bin
+Envs[9]:	SCHRODINGER_FEATUREFLAGS_HIDE_SITE_STATE=1
+Envs[10]:	SCHRODINGER_FEATURE_FLAGS=0
+Envs[11]:	SCHRODINGER_JOBID=nodeb04153-0-6a2a201c
+Envs[12]:	SCHRODINGER_PERL_FEATURE_FLAGS_ENABLED="IGNORE_SCHRODINGER_HOSTS SMART_LICENSE_CHECK"
+Envs[13]:	SCHRODINGER_PRODUCT=mmshare
+Envs[14]:	SCHRODINGER_TPP=
+Envs[15]:	SCHRODINGER_UMASK=18

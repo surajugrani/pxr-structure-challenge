@@ -1,0 +1,2 @@
+SMILES,title,i_i_glide_lignum,docking_status,message,r_glide_cpu_time,r_i_docking_score,s_i_glide_gridfile,r_i_glide_gscore,r_i_glide_lipo,r_i_glide_hbond,r_i_glide_metal,r_i_glide_rewards,r_i_glide_evdw,r_i_glide_ecoul,r_i_glide_erotb,r_i_glide_esite,r_i_glide_emodel,r_i_glide_energy,r_i_glide_einternal
+Cn1cnnc1[C@@H]1CCCN1c1cccc(-n2cnc3ccccc32)n1,,1,Done,,1.042,-9.539,generate-grids-gridgen,-9.539,-3.741,0.0,-0.0,-3.174,-46.59,-4.983,0.4777,-0.02539,-99.06,-51.57,0.4048

@@ -1,0 +1,28 @@
+--- This project was created on Sun Jun  7 18:11:36 2026
+
+-----
+Sun Jun  7 18:12:15 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/6_Single-receptor-9fzj/proteinprep_3/proteinprep_3-out.maegz
+
+-----
+Sun Jun  7 18:14:13 2026
+Starting Receptor Grid Generation
+Job name: glide-grid_1
+Job ID: login02-adm-0-6a261764
+
+-----
+Sun Jun  7 18:14:56 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/processed/Glide/AF3_model/2_ligprep-184-smiles/2_ligprep-184-smiles-out.sdf
+
+-----
+Sun Jun  7 18:17:04 2026
+Starting Ligand Docking
+Job name: glide-dock_SP_1
+Job ID: login02-adm-0-6a26180d
+
+-----
+Wed Jun 10 15:15:26 2026
+Imported file:
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/methods/Glide/6_Single-receptor-9fzj/proteinprep_3/proteinprep_3-out.maegz

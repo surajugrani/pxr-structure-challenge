@@ -14,6 +14,8 @@ scratch/
 .mae
 .sdf
 .maegz
+.ob
+.map
 methods/Glide/9FZJ_docking
 data/processed/9FZJ_Glide_docking
 methods/ICM-Pro/0_AF3_model

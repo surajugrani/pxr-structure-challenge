@@ -1,0 +1,187 @@
+#>I dockproj.CN_I_active
+  0
+#>R dockproj.CN_R_maxDist
+  0.
+#>R dockproj.CN_R_minDist
+  0.
+#>R dockproj.CN_R_weight
+  0.
+#>S dockproj.CN_S_atom
+
+#>S dockproj.CN_S_dest
+
+#>S dockproj.CN_S_type
+
+#>R dockproj.R_4DscoreOffsets
+  0.
+#>R dockproj.R_boxDim
+  -3.883
+  62.24
+  -12.87
+  21.73
+  89.341
+  10.408
+#>R dockproj.R_ligInitPosition
+  9.99099
+  75.8812
+  -0.604405
+  1.
+  0.
+  0.
+  0.
+  1.
+  0.
+#>R dockproj.R_scoreWeights
+  0.
+  1.
+  0.6
+  0.66
+  2.53
+  0.67
+  0.75
+  0.6
+  0.
+#>i dockproj.i_dbSize
+ 235
+#>i dockproj.i_maxHdonors
+ 5
+#>i dockproj.i_maxLigSize
+ 500
+#>i dockproj.i_maxNO
+ 10
+#>i dockproj.i_maxTorsion
+ 10
+#>i dockproj.i_minLigSize
+ 100
+#>i dockproj.i_mnconf
+ 40
+#>i dockproj.i_mnhighEnergy
+ 9999
+#>i dockproj.i_mnreject
+ 10
+#>i dockproj.i_mnvisits
+ 10
+#>i dockproj.i_ringFlexLevel
+ 2
+#>l dockproj.l_assignCharges
+  yes
+#>l dockproj.l_buildHydrogens
+  no
+#>l dockproj.l_dbondCisTrans
+  no
+#>l dockproj.l_enhancedBorn
+  no
+#>l dockproj.l_fixOmegas
+  yes
+#>l dockproj.l_internalHB
+  yes
+#>l dockproj.l_membraneScore
+  no
+#>l dockproj.l_neutralAcidsMol
+  no
+#>l dockproj.l_protProt
+  no
+#>l dockproj.l_readyLigand
+  yes
+#>l dockproj.l_readyMaps
+  yes
+#>l dockproj.l_readyReceptor
+  yes
+#>l dockproj.l_samplePyramid
+  no
+#>l dockproj.l_sampleRacemic
+  no
+#>l dockproj.l_softLigand
+  yes
+#>l dockproj.l_useBornScore
+  yes
+#>r dockproj.r_DpH
+  2.
+#>r dockproj.r_GRID_maxVw
+  4.
+#>r dockproj.r_ScoreThreshold
+  -32.
+#>r dockproj.r_Score_maxVw
+  1.
+#>r dockproj.r_densityWeight
+  0.
+#>r dockproj.r_dockScanVersion
+  4.6
+#>r dockproj.r_maxFFen
+  500.
+#>r dockproj.r_maxLogP
+  5.
+#>r dockproj.r_maxPk
+  5.
+#>r dockproj.r_mcShake
+  4.
+#>r dockproj.r_mfScoreThreshold
+  999.
+#>r dockproj.r_minLogP
+  0.
+#>r dockproj.r_minPk
+  0.
+#>r dockproj.r_pH
+  7.4
+#>r dockproj.r_plRsMiss
+  0.
+#>r dockproj.r_temperature
+  1000.
+#>r dockproj.r_thRstrnt
+  -1.
+#>r dockproj.r_thTautomer
+  -1.
+#>r dockproj.r_vicinity
+  1.5
+#>s dockproj.s_bindPatchRes
+a_dockproj_rec.2:3/*|a_dockproj_rec.a/^D205:^L206,^L209,^V211,^L240,^M243:^A244,^M246:^S247,^M250:^F251,^F281,^C284:^Q285,^F288,^W299,^C301,^Y306,^L308,^E321,^M323:^L324,^H327,^N404,^H407:^T408,^R410:^L411,^I414,^F420,^M425,^F429
+#>s dockproj.s_chargeGroups
+none
+#>s dockproj.s_clrLig
+default
+#>s dockproj.s_clrRec
+grey
+#>s dockproj.s_clrSite
+default pink
+#>s dockproj.s_covModResAt
+none
+#>s dockproj.s_covRxn
+none
+#>s dockproj.s_dbFile
+/gpfs/home/sugrani/SelfLearning/Installed_programs/Pxr-Boltz2/pxr-structure-challenge/data/processed/Glide/AF3_model/2_ligprep-184-smiles/2_ligprep-184-smiles-out.sdf
+#>s dockproj.s_dbIndex
+2_ligprep-184-smiles-out
+#>s dockproj.s_dbType
+mol
+#>s dockproj.s_dspLig
+xstick
+#>s dockproj.s_dspRec
+wire
+#>s dockproj.s_dspSite
+xstick
+#>s dockproj.s_grid4DFlex
+none
+#>s dockproj.s_ligMol
+4:4
+#>s dockproj.s_ligName
+dockproj_default
+#>s dockproj.s_optSC
+a_none
+#>s dockproj.s_recExplicitObj
+none
+#>s dockproj.s_recMol
+1:3
+#>s dockproj.s_recName
+dockproj_rec
+#>s dockproj.s_selLig
+a_*.*//*
+#>s dockproj.s_selRec
+a_*.*//*
+#>s dockproj.s_selSite
+a_*.*//!M5
+#>s dockproj.s_templateMatch
+substructure
+#>s dockproj.s_templateObj
+none
+#>s dockproj.s_xrObj
+none

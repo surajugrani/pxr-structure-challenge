@@ -1,8 +1,8 @@
 #!/bin/bash
 module load icm
 
-for state_dir in 184folders/*/; do
-    echo "Processing $state_dir"
+for state_dir in 3_plainAF3_redocking/184folders/*/; do
+    echo "\n\nProcessing $state_dir"
     abs_lig=$(realpath $(ls "$state_dir"*V200*.sdf))
     abs_rec=$(realpath $(ls "$state_dir"*rec*.pdb))
     abs_lig_base="${abs_lig%.sdf}"
@@ -21,5 +21,5 @@ EOF
     cd "$state_dir"
     icm64 -vlscluster -s /tmp/dock.icm
     icm64 -vlscluster _dockBatch complex.ob ligmol=m -R -u
-    cd ../..
+    cd ../../..
 done
