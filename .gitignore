@@ -21,3 +21,5 @@ data/processed/9FZJ_Glide_docking
 methods/ICM-Pro/0_AF3_model
 slurm/out_files
 methods/Ensemble_Docking/Trial/
+*.icb
+*.ob
