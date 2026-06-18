@@ -13,7 +13,8 @@ scratch/
 *cif
 .mae
 .sdf
-.maegz
+*.maegz
+*_backend.json
 .ob
 .map
 methods/Glide/9FZJ_docking
@@ -23,3 +24,4 @@ slurm/out_files
 methods/Ensemble_Docking/Trial/
 *.icb
 *.ob
+*.map
