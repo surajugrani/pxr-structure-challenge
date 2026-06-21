@@ -25,3 +25,6 @@ methods/Ensemble_Docking/Trial/
 *.icb
 *.ob
 *.map
+
+# Local notes
+NOTES.md
