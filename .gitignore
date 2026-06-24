@@ -28,3 +28,13 @@ methods/Ensemble_Docking/Trial/
 
 # Local notes
 NOTES.md
+
+# Analysis outputs (local only)
+analysis/
+
+# Hybrid submission PDB folders (keep scripts only)
+methods/Hybrid/H*/
+
+# iPTM output folders (PDB sets derived from raw predictions)
+*best-iptm*/
+iptm-0p*/

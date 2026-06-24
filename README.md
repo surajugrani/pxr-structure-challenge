@@ -40,29 +40,28 @@ Among the PDB templates tested (4ny9, 7axe, 9fzj), using **9fzj** as the structu
 
 ### Hybrid strategy: replace low-confidence predictions with ensemble docking
 
-The current best submission combines AF3+9fzj best-iPTM predictions with ensemble docking results for low-confidence structures. For compounds where iPTM < 0.70, the AF3 prediction is replaced by the best-scoring pose from **ICM-Pro 4D ensemble docking** across 14 diverse PXR receptors. This hybrid achieves the best overall performance (rank 4/56, LDDT-PLI=0.5488, BiSyRMSD=3.8158).
+The best submissions combine AF3+9fzj best-iPTM predictions with fallback poses for low-confidence structures. For compounds where iPTM < 0.70, the AF3 prediction is replaced by either the best-scoring ICM-Pro 4D ensemble docking pose or Boltz2+Glide confgen predictions. The current best submission (LDDT-PLI=0.5540, BiSyRMSD=3.542) uses AF3+9fzj best-iPTM as the base, with iPTM<0.70 structures replaced by Boltz2 (rcy=5, smpl=300) + Glide confgen poses.
 
 ---
 
 ## Results Summary
 
-Selected submissions for the 184-compound set (ranked by current leaderboard position):
+Selected submissions for the 184-compound set:
 
-| Sub. | Rank | LDDT-PLI | BiSyRMSD | LDDT-LP | Method |
-|------|------|----------|----------|---------|--------|
-| 43 | 4/56 | 0.5488 | 3.8158 | 0.9132 | AF3+9fzj best-iPTM; iPTM<0.70 → ICM 4D ensemble |
-| 44 | 4/56 | 0.5407 | 3.8360 | 0.9113 | AF3+9fzj best-iPTM; iPTM<0.75 → ICM 4D ensemble |
-| 41 | 4/56 | 0.5298 | 3.8268 | 0.9018 | AF3+9fzj best-iPTM; iPTM<0.75 → Glide ensemble |
-| 37 | 4/55 | 0.5380 | 3.9148 | 0.9039 | AF3+9fzj best-iPTM; iPTM<0.70 → Glide ensemble |
-| 26 | 3/50 | 0.5285 | 4.5284 | 0.9152 | AF3+9fzj best-iPTM |
-| 36 | 9/55 | 0.5132 | 4.6579 | 0.9128 | AF3+7axe best-iPTM |
-| 27 | 9/50 | 0.4971 | 4.7661 | 0.9173 | AF3+template search, best-iPTM |
-| 18 | 3/30 | 0.5055 | 4.7035 | 0.9149 | Plain AF3, default best |
-| 13 | 3/20 | 0.4954 | 3.9243 | 0.9082 | Boltz2 (rcy=5, smpl=300) + Glide confgen |
-| 35 | 40/55 | 0.4266 | 4.7670 | 0.8872 | 14-receptor Glide ensemble docking |
-| 38 | 52/56 | 0.3145 | 6.5166 | 0.8958 | 14-receptor ICM 4D ensemble docking |
-
-> **Note:** The challenge is ongoing. Rankings will change as more teams submit.
+| LDDT-PLI | BiSyRMSD | LDDT-LP | Method |
+|----------|----------|---------|--------|
+| 0.5540 | 3.542 | 0.9145 | AF3+9fzj best-iPTM; iPTM<0.70 → Boltz2+Glide confgen (x01358 also replaced) |
+| 0.5506 | 3.761 | 0.9150 | AF3+9fzj best-iPTM; iPTM<0.70 → Boltz2+Glide confgen |
+| 0.5433 | 3.639 | 0.9138 | AF3+9fzj best-iPTM; iPTM<0.75 → Boltz2+Glide confgen |
+| 0.5488 | 3.816 | 0.9132 | AF3+9fzj best-iPTM; iPTM<0.70 → ICM 4D ensemble |
+| 0.5380 | 3.915 | 0.9039 | AF3+9fzj best-iPTM; iPTM<0.70 → Glide ensemble |
+| 0.5285 | 4.528 | 0.9152 | AF3+9fzj best-iPTM |
+| 0.5132 | 4.658 | 0.9128 | AF3+7axe best-iPTM |
+| 0.4971 | 4.766 | 0.9173 | AF3+template search, best-iPTM |
+| 0.5055 | 4.704 | 0.9149 | Plain AF3, default best |
+| 0.4954 | 3.924 | 0.9082 | Boltz2 (rcy=5, smpl=300) + Glide confgen |
+| 0.4266 | 4.767 | 0.8872 | 14-receptor Glide ensemble docking |
+| 0.3145 | 6.517 | 0.8958 | 14-receptor ICM 4D ensemble docking |
 
 ---
 
