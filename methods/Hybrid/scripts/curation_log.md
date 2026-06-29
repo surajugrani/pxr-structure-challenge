@@ -46,8 +46,8 @@ preferred as it is physically scored.
 
 **Distance threshold:** 8.0 Å
 
-**Submitted:** —
-**Result:** —
+**Submitted:** Yes (sub #54)
+**Result:** Rank 15/60, LDDT-PLI=0.5023, BiSyRMSD=3.8541, LDDT-LP=0.9104 — worse than #52. Distance threshold too aggressive; only 4 compounds >10Å and 3 of those already had low iPTM. The 8Å cutoff pulled in-pocket but imperfect AF3 poses into the fallback unnecessarily.
 
 ---
 
@@ -65,6 +65,55 @@ as in the best iPTM-based submissions (#51, #52).
 - iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
 - High iPTM (≥ 0.70): `Glide/5_AF3-w-9fzj-templ-iptm_redocking/prepwizzed/`
 - Low iPTM (< 0.70) + x01358: `Glide/2_Boltz2-rcy5-smpl300/docked_pdbs/`
+
+**iPTM threshold:** 0.70
+
+**Manual overrides:** x01358-1 (iPTM=0.73 but known bad pose — use fallback)
+
+**Submitted:** Yes (sub #55)
+**Result:** Rank 5/60, LDDT-PLI=0.5329, BiSyRMSD=3.7049, LDDT-LP=0.9138 — better than H1/H2 but worse than raw #52. PrepWiz geometry fixes do not help; the raw AF3 poses in #52 are already better than PrepWiz-prepared ones.
+
+---
+
+## H4 — AF3+9fzj mininplace-minimized (high iPTM) + Boltz2+Glide confgen (low iPTM)
+
+**Output folder:** `methods/Hybrid/H4_AF3-9fzj-mininplace_hiiptm_B2glide_loiptm/`
+
+**Hypothesis:** Same iPTM split as H1/H3, but for high-iPTM structures use Glide
+mininplace-minimized AF3+9fzj poses. Mininplace allows only local torsional
+minimization within the binding site, so it may correct small clashes/geometry
+issues in the AF3 poses without displacing the ligand — more conservative than
+confgen redocking but more physically refined than raw AF3 or PrepWiz.
+Low-iPTM fallback is Boltz2+Glide confgen as in #52.
+
+**Sources:**
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- High iPTM (≥ 0.70): `Glide/5_AF3-w-9fzj-templ-iptm_redocking/minimized_pdbs/`
+- Low iPTM (< 0.70) + x01358-1: `Glide/2_Boltz2-rcy5-smpl300/docked_pdbs/`
+
+**iPTM threshold:** 0.70
+
+**Manual overrides:** x01358-1 (iPTM=0.73 but known bad pose — use fallback)
+
+**Submitted:** —
+**Result:** —
+
+---
+
+## H5 — AF3+9fzj best-iPTM (high iPTM) + ICM-Pro Boltz2 docked (low iPTM)
+
+**Output folder:** `methods/Hybrid/H5_AF3-9fzj_hiiptm_B2icm_loiptm/`
+
+**Hypothesis:** Same as #52 but replace the Boltz2+Glide confgen fallback with
+ICM-Pro docked Boltz2 poses. Sub #43 showed ICM 4D ensemble outperformed Glide
+ensemble when used as a fallback for low-iPTM AF3 structures. Testing whether
+ICM-docked Boltz2 poses also beat Glide-docked Boltz2 for the same ~15 compound
+fallback set.
+
+**Sources:**
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- High iPTM (≥ 0.70): `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/`
+- Low iPTM (< 0.70) + x01358-1: `ICM-Pro/2_Boltz2-rcy5-smpl300/docked_pdb_outs/`
 
 **iPTM threshold:** 0.70
 
