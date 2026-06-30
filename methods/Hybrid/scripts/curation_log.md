@@ -119,6 +119,31 @@ fallback set.
 
 **Manual overrides:** x01358-1 (iPTM=0.73 but known bad pose — use fallback)
 
+**Submitted:** Yes
+**Result:** LDDT-PLI=0.5402, BiSyRMSD=3.6894, LDDT-LP=0.9135 — worse than #52 (0.5540). ICM-docked Boltz2 fallback underperforms Glide-docked Boltz2 for this low-iPTM subset, despite ICM outperforming Glide ensemble in #43 vs #37. Glide confgen remains the better fallback for these ~15 compounds.
+
+---
+
+## H6 — AF3+9fzj best-iPTM + Boltz2+Glide confgen (MW<250 OR iPTM<0.70 OR outlier)
+
+**Output folder:** `methods/Hybrid/H6_AF3-9fzj_mw-iptm-outlier_B2glide-fallback/`
+
+**Hypothesis:** Extend the #52 replacement criterion from iPTM-only to a union of three
+conditions: low MW (< 250 Da, fragment rule-of-3 cutoff), low iPTM (< 0.70), or manual
+outlier (x01358-1). The idea is that AF3 may be overconfident for small fragments —
+reporting high iPTM but still producing poor poses — so MW provides an orthogonal
+signal to catch those cases.
+
+**Sources:**
+- SMILES (for MW): `data/raw/pxr-challenge_structure_TEST_BLINDED.csv`
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- AF3 (high confidence, MW≥250, not outlier): `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/`
+- Fallback: `Glide/2_Boltz2-rcy5-smpl300/docked_pdbs/`
+
+**MW threshold:** 250 Da
+**iPTM threshold:** 0.70
+**Manual overrides:** x01358-1
+
 **Submitted:** —
 **Result:** —
 

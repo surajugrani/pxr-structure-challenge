@@ -256,13 +256,88 @@ def assemble_H5():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# H6 — AF3+9fzj best-iPTM + Boltz2+Glide confgen fallback (MW<250 OR iPTM<0.70 OR outlier)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def assemble_H6():
+    print("\n── Assembling H6 ──")
+
+    from rdkit import Chem
+    from rdkit.Chem import Descriptors
+
+    SMILES_CSV  = os.path.join(ROOT, "data/raw/pxr-challenge_structure_TEST_BLINDED.csv")
+    IPTM_XLSX   = os.path.join(ROOT, "methods/AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx")
+    HIGH_SRC    = os.path.join(ROOT, "methods/AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1")
+    LOW_SRC     = os.path.join(ROOT, "methods/Glide/2_Boltz2-rcy5-smpl300/docked_pdbs")
+    OUT_DIR     = os.path.join(HYBRID_DIR, "H6_AF3-9fzj_mw-iptm-outlier_B2glide-fallback")
+    MW_THRESHOLD   = 250.0
+    IPTM_THRESHOLD = 0.70
+    OVERRIDES      = {"x01358-1"}
+
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    # Compute MW from SMILES
+    smi_df = pd.read_csv(SMILES_CSV)
+    smi_df.columns = smi_df.columns.str.strip()
+    mw = {}
+    for _, row in smi_df.iterrows():
+        mol = Chem.MolFromSmiles(row["smiles"])
+        mw[row["structure"]] = Descriptors.MolWt(mol) if mol else None
+
+    iptm = load_iptm(IPTM_XLSX)
+    all_ids = set(iptm.keys())
+
+    fallback_ids = {
+        cid for cid in all_ids
+        if (mw.get(cid) is not None and mw[cid] < MW_THRESHOLD)
+        or iptm.get(cid, 1.0) < IPTM_THRESHOLD
+        or cid in OVERRIDES
+    }
+    af3_ids = all_ids - fallback_ids
+
+    low_mw   = {cid for cid in all_ids if mw.get(cid) is not None and mw[cid] < MW_THRESHOLD}
+    low_iptm = {cid for cid in all_ids if iptm.get(cid, 1.0) < IPTM_THRESHOLD}
+
+    print(f"  MW threshold: {MW_THRESHOLD} Da  →  {len(low_mw)} compounds")
+    print(f"  iPTM threshold: {IPTM_THRESHOLD}  →  {len(low_iptm)} compounds")
+    print(f"  Manual overrides: {sorted(OVERRIDES)}")
+    print(f"  Total fallback (union): {len(fallback_ids)}")
+    print(f"  AF3 (kept): {len(af3_ids)}")
+
+    copy_structures(sorted(af3_ids),      HIGH_SRC, OUT_DIR, label="AF3+9fzj best-iPTM")
+    copy_structures(sorted(fallback_ids), LOW_SRC,  OUT_DIR, label="Boltz2+Glide confgen")
+
+    lines = [
+        f"Fallback criteria: MW < {MW_THRESHOLD} Da OR iPTM < {IPTM_THRESHOLD} OR manual override",
+        f"Total structures: {len(af3_ids) + len(fallback_ids)}",
+        f"AF3+9fzj source ({len(af3_ids)}): {HIGH_SRC}",
+        f"Boltz2+Glide fallback ({len(fallback_ids)}): {LOW_SRC}",
+        f"  - Low MW only (not low iPTM): {sorted(low_mw - low_iptm - OVERRIDES)}",
+        f"  - Low iPTM only (not low MW): {sorted(low_iptm - low_mw - OVERRIDES)}",
+        f"  - Both low MW and low iPTM: {sorted(low_mw & low_iptm - OVERRIDES)}",
+        f"  - Manual overrides: {sorted(OVERRIDES)}",
+        "",
+        "── AF3 compounds ──",
+        "\n".join(sorted(af3_ids)),
+        "",
+        "── Fallback compounds ──",
+        "\n".join(sorted(fallback_ids)),
+    ]
+    with open(os.path.join(OUT_DIR, "manifest.txt"), "w") as f:
+        f.write("\n".join(lines) + "\n")
+
+    create_zip(OUT_DIR, "H6")
+    print(f"  Output: {OUT_DIR}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Add new submissions below following the same pattern
 # ══════════════════════════════════════════════════════════════════════════════
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
 
-SUBMISSIONS = {"H1": assemble_H1, "H2": assemble_H2, "H3": assemble_H3, "H4": assemble_H4, "H5": assemble_H5}
+SUBMISSIONS = {"H1": assemble_H1, "H2": assemble_H2, "H3": assemble_H3, "H4": assemble_H4, "H5": assemble_H5, "H6": assemble_H6}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
