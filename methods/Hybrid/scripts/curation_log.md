@@ -95,8 +95,8 @@ Low-iPTM fallback is Boltz2+Glide confgen as in #52.
 
 **Manual overrides:** x01358-1 (iPTM=0.73 but known bad pose — use fallback)
 
-**Submitted:** —
-**Result:** —
+**Submitted:** Yes (sub #57)
+**Result:** Rank 5/60, LDDT-PLI=0.5302, BiSyRMSD=3.7166, LDDT-LP=0.9127 — worse than #52 (0.5540). Mininplace minimization degrades AF3 poses; raw AF3 remains better than any Glide post-processing for high-iPTM structures.
 
 ---
 
@@ -144,6 +144,5 @@ signal to catch those cases.
 **iPTM threshold:** 0.70
 **Manual overrides:** x01358-1
 
-**Submitted:** —
-**Result:** —
-
+**Submitted:** Yes (sub #59)
+**Result:** Rank 24/73, LDDT-PLI=0.5061, BiSyRMSD=3.8454, LDDT-LP=0.9097 — much worse than #52 (0.5540). AF3 is NOT overconfident on high-iPTM fragments; replacing 75 compounds (vs 15 in #52) with docking massively hurts performance. MW alone is a poor criterion — iPTM is the better signal.

@@ -61,7 +61,7 @@ Selected submissions for the 184-compound set:
 | 0.5055 | 4.704 | 0.9149 | Plain AF3, default best |
 | 0.4954 | 3.924 | 0.9082 | Boltz2 (rcy=5, smpl=300) + Glide confgen |
 | 0.4266 | 4.767 | 0.8872 | 14-receptor Glide ensemble docking |
-| 0.3145 | 6.517 | 0.8958 | 14-receptor ICM 4D ensemble docking |
+| 0.3346 | 5.876 | 0.8984 | 14-receptor ICM 4D ensemble docking |
 
 ---
 
