@@ -331,13 +331,48 @@ def assemble_H6():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# H7 — AF3+9fzj best-iPTM (high iPTM) + ICM 4D smaller-box ensemble (low iPTM + overrides)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def assemble_H7():
+    print("\n── Assembling H7 ──")
+
+    IPTM_XLSX = os.path.join(ROOT, "methods/AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx")
+    HIGH_SRC  = os.path.join(ROOT, "methods/AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1")
+    LOW_SRC   = os.path.join(ROOT, "methods/Ensemble_Docking/Docking_14-recs/ICM_4d-docking/Processed_Out_PDBs_smallerbox")
+    OUT_DIR   = os.path.join(HYBRID_DIR, "H7_AF3-9fzj_hiiptm_ICM4d-smlbx_loiptm")
+    THRESHOLD = 0.70
+    OVERRIDES = {"x01358-1", "x03063-1"}
+
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    iptm = load_iptm(IPTM_XLSX)
+    all_ids = set(iptm.keys())
+
+    high_ids = {cid for cid, v in iptm.items() if v >= THRESHOLD and cid not in OVERRIDES}
+    low_ids  = (all_ids - high_ids) | OVERRIDES
+
+    print(f"  iPTM threshold: {THRESHOLD}")
+    print(f"  High-iPTM (AF3+9fzj best-iPTM): {len(high_ids)}")
+    print(f"  Low-iPTM + overrides (ICM 4D smaller-box): {len(low_ids)}")
+
+    copy_structures(sorted(high_ids), HIGH_SRC, OUT_DIR, label="AF3+9fzj best-iPTM")
+    copy_structures(sorted(low_ids),  LOW_SRC,  OUT_DIR, label="ICM 4D smaller-box")
+    write_manifest(OUT_DIR, high_ids, low_ids, OVERRIDES,
+                   high_src=HIGH_SRC, low_src=LOW_SRC)
+    create_zip(OUT_DIR, "H7")
+
+    print(f"  Output: {OUT_DIR}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Add new submissions below following the same pattern
 # ══════════════════════════════════════════════════════════════════════════════
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
 
-SUBMISSIONS = {"H1": assemble_H1, "H2": assemble_H2, "H3": assemble_H3, "H4": assemble_H4, "H5": assemble_H5, "H6": assemble_H6}
+SUBMISSIONS = {"H1": assemble_H1, "H2": assemble_H2, "H3": assemble_H3, "H4": assemble_H4, "H5": assemble_H5, "H6": assemble_H6, "H7": assemble_H7}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

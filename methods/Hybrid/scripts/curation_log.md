@@ -146,3 +146,27 @@ signal to catch those cases.
 
 **Submitted:** Yes (sub #59)
 **Result:** Rank 24/73, LDDT-PLI=0.5061, BiSyRMSD=3.8454, LDDT-LP=0.9097 — much worse than #52 (0.5540). AF3 is NOT overconfident on high-iPTM fragments; replacing 75 compounds (vs 15 in #52) with docking massively hurts performance. MW alone is a poor criterion — iPTM is the better signal.
+
+---
+
+## H7 — AF3+9fzj best-iPTM (high iPTM) + ICM 4D smaller-box ensemble (low iPTM + overrides)
+
+**Output folder:** `methods/Hybrid/H7_AF3-9fzj_hiiptm_ICM4d-smlbx_loiptm/`
+
+**Hypothesis:** Same iPTM split as #60, but use ICM 4D smaller-box ensemble docking
+(sub #39) as the fallback instead of Boltz2+Glide confgen. Sub #39 outperformed
+the original ICM 4D box (#38) for standalone docking. The blind half of the
+leaderboard is all larger compounds, where ICM's 4D ensemble sampling across 14
+receptor conformations may generalize better than Glide confgen. Overrides include
+both x01358-1 and x03063-1 (as in #60).
+
+**Sources:**
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- High iPTM (≥ 0.70): `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/`
+- Low iPTM (< 0.70) + overrides: `Ensemble_Docking/Docking_14-recs/ICM_4d-docking/Processed_Out_PDBs_smallerbox/`
+
+**iPTM threshold:** 0.70
+**Manual overrides:** x01358-1, x03063-1
+
+**Submitted:** —
+**Result:** —
