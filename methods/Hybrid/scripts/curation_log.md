@@ -168,5 +168,49 @@ both x01358-1 and x03063-1 (as in #60).
 **iPTM threshold:** 0.70
 **Manual overrides:** x01358-1, x03063-1
 
+**Submitted:** Yes (sub #61)
+**Result:** Rank 19/94, LDDT-PLI=0.5513, BiSyRMSD=3.6091, LDDT-LP=0.9133 — slightly worse than #60 (0.5536). Boltz2+Glide confgen remains the better fallback over ICM 4D smaller-box for the low-iPTM set.
+
+---
+
+## H8 — AF3+9fzj best-iPTM + ICM 4D smaller-box (iPTM<0.75 + overrides)
+
+**Output folder:** `methods/Hybrid/H8_AF3-9fzj_iptm0p75_ICM4d-smlbx_loiptm/`
+
+**Hypothesis:** Same as H7 but with a wider replacement threshold (0.75 instead of 0.70),
+replacing more borderline-confidence AF3 structures with ICM 4D smaller-box poses.
+Testing whether the 0.70–0.75 iPTM range is better served by ICM docking,
+particularly for the blind (larger compound) half of the dataset.
+
+**Sources:**
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- High iPTM (≥ 0.75): `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/`
+- Low iPTM (< 0.75) + overrides: `Ensemble_Docking/Docking_14-recs/ICM_4d-docking/Processed_Out_PDBs_smallerbox/`
+
+**iPTM threshold:** 0.75
+**Manual overrides:** x01358-1, x03063-1
+
+**Submitted:** Yes (sub #62)
+**Result:** Rank 25/94, LDDT-PLI=0.5407, BiSyRMSD=3.8360, LDDT-LP=0.9113 — worse than #60. Wider threshold pulls in too many good AF3 poses for ICM to replace.
+
+---
+
+## H9 — AF3+9fzj best-iPTM + ICM 4D smaller-box (iPTM<0.80 + overrides)
+
+**Output folder:** `methods/Hybrid/H9_AF3-9fzj_iptm0p80_ICM4d-smlbx_loiptm/`
+
+**Hypothesis:** Same as H7/H8 but with an even wider threshold (0.80), replacing all
+lower-confidence AF3 structures with ICM 4D smaller-box poses. Tests the upper bound
+of how far the ICM fallback can be extended before it starts replacing genuinely good
+AF3 poses.
+
+**Sources:**
+- iPTM values: `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/results.xlsx`
+- High iPTM (≥ 0.80): `AlphaFold3/2_w-9fzj-template/best-iptm_PDB_outs1/`
+- Low iPTM (< 0.80) + overrides: `Ensemble_Docking/Docking_14-recs/ICM_4d-docking/Processed_Out_PDBs_smallerbox/`
+
+**iPTM threshold:** 0.80
+**Manual overrides:** x01358-1, x03063-1
+
 **Submitted:** —
 **Result:** —
